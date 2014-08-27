@@ -114,6 +114,7 @@ if(!isset($argv[1])) {
 } else if(!is_dir($argv[1])) {
 	exit($argv[1] . ' is not a Directory.' . chr(10) . 'Usage: php ImagesRenameToDate.php /PATH/TO/IMAGES/FOLDER' . chr(10));
 }
+
 $simulation = FALSE;
 if(isset($argv[2])) {
 	$simulation = TRUE;

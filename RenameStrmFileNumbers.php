@@ -83,7 +83,6 @@ class RenameStrmFileNumbers {
 		echo 'Duration:' . chr(9) . (time() - $this->starttime) . ' seconds' . chr(10);
 		echo '------------------------------' . chr(10);
 	}
-
 }
 
 if(!isset($argv[1])) {
