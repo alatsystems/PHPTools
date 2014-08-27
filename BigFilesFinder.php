@@ -30,7 +30,7 @@ class BigFilesFinder {
 		$this->multiple = array();
 		$this->conf = array(
 			# path to monitoring files with md5 sums
-			'path' => getcwd(),
+			'path' => getcwd() . '/',
 			'debug' => $debug,
 			'threshold' => $threshold
 		);
@@ -177,13 +177,13 @@ if(isset($argv[1])) {
 if(isset($argv[2])) {
 	if(intval($argv[2]) > 0 ) {
 		$threshold = intval($argv[2] * 1048576);
-		if($config['debug']) {
+		if($debug) {
 			echo 'Threshold set to ' . number_format($threshold / 1048576, 3) . ' MB' . chr(10);
 		}
 	}
 }
 
-if($debug]) {
+if($debug) {
 	echo 'Starting Server Check.' . chr(10);
 }
 $obj = new BigFilesFinder($debug, $threshold);
